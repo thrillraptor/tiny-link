@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({
+const inter = Inter({
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Snip Snap",
-  description:
-    "Turn unwieldy URLs into crisp, shareable links in a single click",
+  title: "Tiny Link",
+  description: "Shorten your long URLs into shareable links in seconds.",
 };
 
 export default function RootLayout({
@@ -19,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className}`}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
